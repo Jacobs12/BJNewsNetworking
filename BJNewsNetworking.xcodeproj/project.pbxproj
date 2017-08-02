@@ -15,6 +15,7 @@
 		4F61C2CD1F3180B500DF784F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F61C2CB1F3180B500DF784F /* LaunchScreen.storyboard */; };
 		4F61C2D81F3180B500DF784F /* BJNewsNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2D71F3180B500DF784F /* BJNewsNetworkingTests.m */; };
 		4F61C2E31F3180B500DF784F /* BJNewsNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2E21F3180B500DF784F /* BJNewsNetworkingUITests.m */; };
+		4F61C2F31F31854E00DF784F /* BJNewsNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */; };
 		E4685CAB8ABEFDD46D1B8FBE /* libPods-BJNewsNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F4928417545044E44268C /* libPods-BJNewsNetworking.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		4F61C2DE1F3180B500DF784F /* BJNewsNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BJNewsNetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F61C2E21F3180B500DF784F /* BJNewsNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJNewsNetworkingUITests.m; sourceTree = "<group>"; };
 		4F61C2E41F3180B500DF784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F61C2F11F31854E00DF784F /* BJNewsNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJNewsNetworking.h; sourceTree = "<group>"; };
+		4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJNewsNetworking.m; sourceTree = "<group>"; };
 		54625FE7BDC4A34E05E4717F /* Pods-BJNewsNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJNewsNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJNewsNetworking/Pods-BJNewsNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		8030CB759F13075B67D2E0A0 /* Pods-BJNewsNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJNewsNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJNewsNetworking/Pods-BJNewsNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		865F4928417545044E44268C /* libPods-BJNewsNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJNewsNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,7 @@
 		4F61C2BC1F3180B500DF784F /* BJNewsNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				4F61C2F01F31853A00DF784F /* BJNewsNetworking */,
 				4F61C2C01F3180B500DF784F /* AppDelegate.h */,
 				4F61C2C11F3180B500DF784F /* AppDelegate.m */,
 				4F61C2C31F3180B500DF784F /* ViewController.h */,
@@ -154,6 +158,15 @@
 				4F61C2E41F3180B500DF784F /* Info.plist */,
 			);
 			path = BJNewsNetworkingUITests;
+			sourceTree = "<group>";
+		};
+		4F61C2F01F31853A00DF784F /* BJNewsNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4F61C2F11F31854E00DF784F /* BJNewsNetworking.h */,
+				4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */,
+			);
+			path = BJNewsNetworking;
 			sourceTree = "<group>";
 		};
 		F60F90272D3064D24E2CCCD4 /* Frameworks */ = {
@@ -353,6 +366,7 @@
 			files = (
 				4F61C2C51F3180B500DF784F /* ViewController.m in Sources */,
 				4F61C2C21F3180B500DF784F /* AppDelegate.m in Sources */,
+				4F61C2F31F31854E00DF784F /* BJNewsNetworking.m in Sources */,
 				4F61C2BF1F3180B500DF784F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +607,7 @@
 				4F61C2E91F3180B500DF784F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F61C2EA1F3180B500DF784F /* Build configuration list for PBXNativeTarget "BJNewsNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +616,7 @@
 				4F61C2EC1F3180B500DF784F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F61C2ED1F3180B500DF784F /* Build configuration list for PBXNativeTarget "BJNewsNetworkingUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +625,7 @@
 				4F61C2EF1F3180B500DF784F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
