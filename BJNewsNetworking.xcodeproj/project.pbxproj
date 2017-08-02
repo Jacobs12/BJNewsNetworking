@@ -16,6 +16,7 @@
 		4F61C2D81F3180B500DF784F /* BJNewsNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2D71F3180B500DF784F /* BJNewsNetworkingTests.m */; };
 		4F61C2E31F3180B500DF784F /* BJNewsNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2E21F3180B500DF784F /* BJNewsNetworkingUITests.m */; };
 		4F61C2F31F31854E00DF784F /* BJNewsNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */; };
+		4F61C2F61F31860000DF784F /* BJNewsSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2F51F31860000DF784F /* BJNewsSessionRequest.m */; };
 		E4685CAB8ABEFDD46D1B8FBE /* libPods-BJNewsNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F4928417545044E44268C /* libPods-BJNewsNetworking.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		4F61C2E41F3180B500DF784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F61C2F11F31854E00DF784F /* BJNewsNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJNewsNetworking.h; sourceTree = "<group>"; };
 		4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJNewsNetworking.m; sourceTree = "<group>"; };
+		4F61C2F41F31860000DF784F /* BJNewsSessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJNewsSessionRequest.h; sourceTree = "<group>"; };
+		4F61C2F51F31860000DF784F /* BJNewsSessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJNewsSessionRequest.m; sourceTree = "<group>"; };
 		54625FE7BDC4A34E05E4717F /* Pods-BJNewsNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJNewsNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJNewsNetworking/Pods-BJNewsNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		8030CB759F13075B67D2E0A0 /* Pods-BJNewsNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJNewsNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJNewsNetworking/Pods-BJNewsNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		865F4928417545044E44268C /* libPods-BJNewsNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJNewsNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 			children = (
 				4F61C2F11F31854E00DF784F /* BJNewsNetworking.h */,
 				4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */,
+				4F61C2F41F31860000DF784F /* BJNewsSessionRequest.h */,
+				4F61C2F51F31860000DF784F /* BJNewsSessionRequest.m */,
 			);
 			path = BJNewsNetworking;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 			files = (
 				4F61C2C51F3180B500DF784F /* ViewController.m in Sources */,
 				4F61C2C21F3180B500DF784F /* AppDelegate.m in Sources */,
+				4F61C2F61F31860000DF784F /* BJNewsSessionRequest.m in Sources */,
 				4F61C2F31F31854E00DF784F /* BJNewsNetworking.m in Sources */,
 				4F61C2BF1F3180B500DF784F /* main.m in Sources */,
 			);
@@ -519,6 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 42LRDW5LP3;
 				INFOPLIST_FILE = BJNewsNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bjnews.BJNewsNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 42LRDW5LP3;
 				INFOPLIST_FILE = BJNewsNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bjnews.BJNewsNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";

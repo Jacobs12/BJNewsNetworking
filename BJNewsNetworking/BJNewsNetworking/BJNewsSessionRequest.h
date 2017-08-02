@@ -1,5 +1,5 @@
 //
-//  BJNewsNetworking.h
+//  BJNewsSessionRequest.h
 //  BJNewsNetworking
 //
 //  Created by wolffy on 2017/8/2.
@@ -8,12 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BJNewsNetworking : NSObject
+@interface BJNewsSessionRequest : NSObject
 
-+ (BJNewsNetworking *)defaultManager;
+typedef NS_ENUM(NSInteger,BJNewsSessionRequestMethod){
+    BJNewsSessionRequestMethodGet,
+    BJNewsSessionRequestMethodPost,
+    BJNewsSessionRequestMethodPut,
+    BJNewsSessionRequestMethodDelete
+};
+
+typedef NS_ENUM(NSInteger,BJNewsParametersType){
+    BJNewsParametersTypeText,
+    BJNewsParametersTypeJson
+};
+
+@property (nonatomic,strong) NSURLSessionDataTask * dataTask;
 
 /**
  发起GET请求
+ 读取
  
  @param host 主机url
  @param headers 请求头
@@ -24,7 +37,8 @@
 
 /**
  发起POST请求
-
+ 增添
+ 
  @param host 主机url
  @param headers 请求头
  @param parameters 请求体
