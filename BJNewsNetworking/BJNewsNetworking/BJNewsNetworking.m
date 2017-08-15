@@ -8,6 +8,8 @@
 
 #import "BJNewsNetworking.h"
 #import "BJNewsSessionRequest.h"
+#import "GTMBase64.h"
+#import "NSString+Hashing.h"
 
 static BJNewsNetworking * bjnews_net_manager = nil;
 
@@ -73,6 +75,49 @@ static BJNewsNetworking * bjnews_net_manager = nil;
 - (void)DELETEWithHost:(NSString *)host headers:(NSDictionary *)headers finished:(void (^)(NSURLResponse * response,NSData * responseData))finished failed:(void (^) (NSURLResponse * response,NSData * responseData))failed{
     BJNewsSessionRequest * request = [[BJNewsSessionRequest alloc]init];
     [request DELETEWithHost:host headers:headers finished:finished failed:failed];
+}
+
+#pragma mark -
+#pragma mark - Upload Image
+
+/**
+ 以PUT方式上传头像
+ 
+ @param host 主机url
+ @param headers 请求头
+ @param parameters 请求体
+ @param fileData 需要上传的图片
+ @param finished 成功回调
+ @param failed 失败回调
+ */
+- (void)PUTWithHost:(NSString *)host headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters userAccount:(NSString *)userAccount uploadFileData:(NSData *)fileData fileKey:(NSString *)fileKey secretKey:(NSString *)secretKey finished:(void (^)(NSURLResponse *, NSData *))finished failed:(void (^)(NSURLResponse *, NSData *))failed{
+    NSMutableDictionary * tempParameters = [[NSMutableDictionary alloc]initWithDictionary:parameters];
+    NSMutableDictionary * tempHeaders = [[NSMutableDictionary alloc]initWithDictionary:headers];
+//    base64图片
+    NSData * encodeData = [GTMBase64 encodeData:fileData];
+    NSString * encodeString = [[NSString alloc]initWithData:encodeData encoding:NSUTF8StringEncoding];
+    [tempParameters setValue:encodeString forKey:fileKey];
+//    sign = md5( md5( base64( 图片 ) ) + key + mobile )
+    NSString * md5_image = [self getSignString:encodeString];
+    NSString * signStr = [NSString stringWithFormat:@"%@%@%@",md5_image,secretKey,userAccount];
+    NSString * sign = [self getSignString:signStr];
+    [headers setValue:sign forKey:@"Sign"];
+    
+    [self PUTWithHost:host headers:tempHeaders parameters:tempParameters finished:finished failed:failed];
+}
+
+- (NSString *)getSignString:(NSString *)string{
+    NSString * sign1 = [[NSString stringWithFormat:@"%@",string] MD5Hash];
+    NSMutableString * str = [[NSMutableString alloc]init];
+    for(int i=0;i<sign1.length;i++){
+        char c = [sign1 characterAtIndex:i];
+        if(c >= 'A' && c <= 'Z'){
+            c += 32;
+        }
+        [str appendFormat:@"%c",c];
+    }
+    NSString * sign = [NSString stringWithFormat:@"%@",str];
+    return sign;
 }
 
 @end

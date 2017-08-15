@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F471E0C1F3C5553004FE890 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F471E0A1F3C5553004FE890 /* GTMBase64.m */; };
+		4F471E101F3C556F004FE890 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F471E0F1F3C556F004FE890 /* NSString+Hashing.m */; };
 		4F61C2BF1F3180B500DF784F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2BE1F3180B500DF784F /* main.m */; };
 		4F61C2C21F3180B500DF784F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2C11F3180B500DF784F /* AppDelegate.m */; };
 		4F61C2C51F3180B500DF784F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61C2C41F3180B500DF784F /* ViewController.m */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F471E091F3C5553004FE890 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		4F471E0A1F3C5553004FE890 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		4F471E0B1F3C5553004FE890 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		4F471E0E1F3C556F004FE890 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
+		4F471E0F1F3C556F004FE890 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		4F61C2BA1F3180B500DF784F /* BJNewsNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJNewsNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F61C2BE1F3180B500DF784F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F61C2C01F3180B500DF784F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +103,25 @@
 				54625FE7BDC4A34E05E4717F /* Pods-BJNewsNetworking.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F471E081F3C5553004FE890 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				4F471E091F3C5553004FE890 /* GTMBase64.h */,
+				4F471E0A1F3C5553004FE890 /* GTMBase64.m */,
+				4F471E0B1F3C5553004FE890 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		4F471E0D1F3C556F004FE890 /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				4F471E0E1F3C556F004FE890 /* NSString+Hashing.h */,
+				4F471E0F1F3C556F004FE890 /* NSString+Hashing.m */,
+			);
+			path = Hash;
 			sourceTree = "<group>";
 		};
 		4F61C2B11F3180B500DF784F = {
@@ -170,6 +196,8 @@
 				4F61C2F21F31854E00DF784F /* BJNewsNetworking.m */,
 				4F61C2F41F31860000DF784F /* BJNewsSessionRequest.h */,
 				4F61C2F51F31860000DF784F /* BJNewsSessionRequest.m */,
+				4F471E0D1F3C556F004FE890 /* Hash */,
+				4F471E081F3C5553004FE890 /* GTMBase64 */,
 			);
 			path = BJNewsNetworking;
 			sourceTree = "<group>";
@@ -370,8 +398,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F61C2C51F3180B500DF784F /* ViewController.m in Sources */,
+				4F471E0C1F3C5553004FE890 /* GTMBase64.m in Sources */,
 				4F61C2C21F3180B500DF784F /* AppDelegate.m in Sources */,
 				4F61C2F61F31860000DF784F /* BJNewsSessionRequest.m in Sources */,
+				4F471E101F3C556F004FE890 /* NSString+Hashing.m in Sources */,
 				4F61C2F31F31854E00DF784F /* BJNewsNetworking.m in Sources */,
 				4F61C2BF1F3180B500DF784F /* main.m in Sources */,
 			);

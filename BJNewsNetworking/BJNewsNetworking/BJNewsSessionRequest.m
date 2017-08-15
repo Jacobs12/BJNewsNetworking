@@ -148,6 +148,14 @@
 
 #pragma mark - 
 #pragma mark - dataTask
+
+/**
+ 请求任务dataTask
+
+ @param request 请求
+ @param completionHandler 结束回调
+ @return 请求任务dataTask
+ */
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSMutableURLRequest *)request completionHandler:(void (^) (NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error))completionHandler{
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];
