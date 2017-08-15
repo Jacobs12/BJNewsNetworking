@@ -101,7 +101,7 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     NSString * md5_image = [self getSignString:encodeString];
     NSString * signStr = [NSString stringWithFormat:@"%@%@%@",md5_image,secretKey,userAccount];
     NSString * sign = [self getSignString:signStr];
-    [headers setValue:sign forKey:@"Sign"];
+    [tempHeaders setValue:sign forKey:@"Sign"];
     
     [self PUTWithHost:host headers:tempHeaders parameters:tempParameters finished:finished failed:failed];
 }
