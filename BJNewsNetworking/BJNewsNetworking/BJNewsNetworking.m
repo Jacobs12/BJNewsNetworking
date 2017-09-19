@@ -22,6 +22,9 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     return bjnews_net_manager;
 }
 
+#pragma mark -
+#pragma mark - GET
+
 /**
  发起GET请求
  
@@ -35,6 +38,8 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     BJNewsSessionRequest * request = [[BJNewsSessionRequest alloc]init];
     [request GETWithHost:host headers:headers finished:finished failed:failed];
 }
+
+#pragma mark - POST
 
 /**
  发起POST请求
@@ -50,6 +55,8 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     [request POSTWithHost:host headers:headers parameters:parameters finished:finished failed:failed];
 }
 
+#pragma mark - PUT
+
 /**
  发起PUT请求
  
@@ -64,6 +71,8 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     [request PUTWithHost:host headers:headers parameters:parameters finished:finished failed:failed];
 }
 
+#pragma mark - DELETE
+
 /**
  发起DELETE请求
  
@@ -76,9 +85,6 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     BJNewsSessionRequest * request = [[BJNewsSessionRequest alloc]init];
     [request DELETEWithHost:host headers:headers finished:finished failed:failed];
 }
-
-#pragma mark -
-#pragma mark - Upload Image
 
 /**
  以PUT方式上传头像
@@ -105,6 +111,9 @@ static BJNewsNetworking * bjnews_net_manager = nil;
     
     [self PUTWithHost:host headers:tempHeaders parameters:tempParameters finished:finished failed:failed];
 }
+
+#pragma mark -
+#pragma mark - others
 
 - (NSString *)getSignString:(NSString *)string{
     NSString * sign1 = [[NSString stringWithFormat:@"%@",string] MD5Hash];

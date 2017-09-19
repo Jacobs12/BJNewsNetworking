@@ -16,6 +16,8 @@
 #pragma mark - 
 #pragma mark - 基础 GET POST PUT DELETE
 
+#pragma mark - GET
+
 /**
  发起GET请求
  
@@ -26,6 +28,7 @@
  */
 - (void)GETWithHost:(NSString *)host headers:(NSDictionary *)headers finished:(void (^)(NSURLResponse * response,NSData * responseData))finished failed:(void (^) (NSURLResponse * response,NSData * responseData))failed;
 
+#pragma mark - POST
 /**
  发起POST请求
 
@@ -37,6 +40,7 @@
  */
 - (void)POSTWithHost:(NSString *)host headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters finished:(void (^)(NSURLResponse * response,NSData * responseData))finished failed:(void (^) (NSURLResponse * response,NSData * responseData))failed;
 
+#pragma mark - PUT
 /**
  发起PUT请求
  
@@ -48,6 +52,7 @@
  */
 - (void)PUTWithHost:(NSString *)host headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters finished:(void (^)(NSURLResponse * response,NSData * responseData))finished failed:(void (^) (NSURLResponse * response,NSData * responseData))failed;
 
+#pragma mark - DELETE
 /**
  发起DELETE请求
  
